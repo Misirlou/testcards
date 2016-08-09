@@ -1,0 +1,22 @@
+{
+  "name": "testcards",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Misirlou/testcards.git"
+  },
+  "author": "Diogo Basto",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Misirlou/testcards/issues"
+  },
+  "homepage": "https://github.com/Misirlou/testcards#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
