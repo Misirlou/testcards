@@ -11,12 +11,12 @@ app.get('/', function(req,res) {
 	if (req.query.callback !== undefined)
 	{
 		console.log(req.query.callback);
-		res.jsonp([{"title":"Anamazingtitle","description":"Somethingaboutthiscard","ctas":[{"text":"125for1","value":"c1cta1"},{"text":"200for2","value":"c1cta2"}],"important":"yes"},{"title":"Anamazingtitle2","description":"Somethingaboutthisothercard","ctas":[{"text":"300","value":"c2"}]},{"title":"Didn'tlikeanything?","description":"Searchforsomethingelse","ctas":[{"text":"Search","value":"search"}],"important":"max"}]);
+		res.jsonp({"cards":[{"image":"http://i.imgur.com/eM2Uena.jpg","title":"Anamazingtitle","description":"Somethingaboutthiscard","ctas":[{"text":"125for1","value":"c1cta1"},{"text":"200for2","value":"c1cta2"}],"important":"yes"},{"title":"Anamazingtitle2","description":"Somethingaboutthisothercard","ctas":[{"text":"300","value":"c2"}]},{"title":"Didn'tlikeanything?","description":"Searchforsomethingelse","ctas":[{"text":"Search","value":"search"}],"important":"max"}]});
 	}
 	else
 	{
 		console.log("no callback");
-		res.json([{"title":"Anamazingtitle","description":"Somethingaboutthiscard","ctas":[{"text":"125for1","value":"c1cta1"},{"text":"200for2","value":"c1cta2"}],"important":"yes"},{"title":"Anamazingtitle2","description":"Somethingaboutthisothercard","ctas":[{"text":"300","value":"c2"}]},{"title":"Didn'tlikeanything?","description":"Searchforsomethingelse","ctas":[{"text":"Search","value":"search"}],"important":"max"}]);
+		res.json({"cards":[{"image":"http://i.imgur.com/eM2Uena.jpg","title":"Anamazingtitle","description":"Somethingaboutthiscard","ctas":[{"text":"125for1","value":"c1cta1"},{"text":"200for2","value":"c1cta2"}],"important":"yes"},{"title":"Anamazingtitle2","description":"Somethingaboutthisothercard","ctas":[{"text":"300","value":"c2"}]},{"title":"Didn'tlikeanything?","description":"Searchforsomethingelse","ctas":[{"text":"Search","value":"search"}],"important":"max"}]});
 	}
 });
 
