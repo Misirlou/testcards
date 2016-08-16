@@ -15,6 +15,7 @@ app.get('/', function(req,res) {
 	}
 	else if (req.query.with_errors !== undefined)
 	{
+		console.log("errors "+req.query.with_errors);
 		res.json({"cards":[{"ctas":[{"text":"125for1","value":"c1cta1"},{"text":"200for2","value":"c1cta2"}],"important":"yes"},{"ctas":[{"text":"300","value":"c2"}]},{"ctas":[{"text":"Search","value":"search"}],"important":"max"}]});
 	}
 	else
