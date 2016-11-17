@@ -16,7 +16,8 @@ app.get('/', function(req,res) {
 	else if (req.query.with_errors !== undefined)
 	{
 		console.log("errors "+req.query.with_errors);
-		res.json({"cards":[{"ctas":[{"text":"125for1","value":"c1cta1"},{"text":"200for2","value":"c1cta2"}],"important":"yes"},{"ctas":[{"text":"300","value":"c2"}]},{"ctas":[{"text":"Search","value":"search"}],"important":"max"}]});
+res.json({});
+//		res.json({"cards":[{"ctas":[{"text":"125for1","value":"c1cta1"},{"text":"200for2","value":"c1cta2"}],"important":"yes"},{"ctas":[{"text":"300","value":"c2"}]},{"ctas":[{"text":"Search","value":"search"}],"important":"max"}]});
 	}
 	else
 	{
@@ -25,6 +26,21 @@ app.get('/', function(req,res) {
 	}
 });
 
+
+
+app.get('/variables', function(req,res) {
+	console.log(req.query);
+	if (req.query.callback !== undefined)
+	{
+		console.log("callback");
+		res.jsonp({"ola":"mundo","idade":18});
+	}
+	else
+	{
+		console.log("no callback");
+		res.json({"ola":"mundo","idade":18});
+	}
+});
 
 app.listen(_PORT_, function() {
 	console.log(`Server started on port: ${_PORT_}`);
